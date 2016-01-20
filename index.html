@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <meta charset="utf-8">
+    <title>Defib Locator</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+  <div class="nav">
+  <h1>Wellington Free Almbulance Defib Locator</h1>
+  </div>
+  <div>
+  <h1 class="header">Holla</h1>
+  </div>
+    <div id="map"></div>
+    <script>
+
+// The following example creates complex markers to indicate defibs near
+// Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
+// to the base of the flagpole.
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 12,
+    center: {lat: -41.29649999999999, lng: 174.77446540000005}
+  });
+
+  setMarkers(map);
+}
+
+// Data for the markers consisting of a name, a LatLng and a zIndex for the
+// order in which these markers should display on top of each other.
+var defibs = [
+["Pak N Save Kilbirnie", -41.319012, 174.796646,],
+["Wellington Airport Level 1 - International Terminal", -41.32759410000001, 174.80759839999996,],
+["Southern Cross Garden Bar Restaurant", -41.29649999999999, 174.77446540000005,],
+["Briscoes Taranki St",  -41.2950636, 174.77709630000004,],
+["St James Theatre",  -41.2931638, 174.77967509999996,],
+["Crown Forestry Rental Trust - Level 7",  -41.28697599999999, 174.77736900000002,],
+["Victoria University Campus Security - Level 1 - Cotton Building", -41.2904017, 174.7686615,], 
+["Wellington Central Library",  -41.28819439999999, 174.77680609999993,],
+["Michael Fowler Centre",  -41.2894328, 174.77806299999997,], 
+["TSB Bank Arena",  -41.2855147, 174.77872209999998,]
+];
+
+function setMarkers(map) {
+  // Adds markers to the map.
+
+  // Marker sizes are expressed as a Size of X,Y where the origin of the image
+  // (0,0) is located in the top left of the image.
+
+  // Origins, anchor positions and coordinates of the marker increase in the X
+  // direction to the right and in the Y direction down.
+  var image = {
+    url: 'img/wfa.jpg',
+    
+    size: new google.maps.Size(38, 21),
+    // The origin for this image is (0, 0).
+    origin: new google.maps.Point(0, 0),
+    // The anchor for this image is the base of the flagpole at (0, 32).
+    anchor: new google.maps.Point(0, 32)
+  };
+  // Shapes define the clickable region of the icon. The type defines an HTML
+  // <area> element 'poly' which traces out a polygon as a series of X,Y points.
+  // The final coordinate closes the poly by connecting to the first coordinate.
+  var shape = {
+    coords: [1, 1, 1, 20, 18, 20, 18, 1],
+    type: 'poly'
+  };
+  for (var i = 0; i < defibs.length; i++) {
+    var defib = defibs[i];
+    var marker = new google.maps.Marker({
+      position: {lat: defib[1], lng: defib[2]},
+      map: map,
+      icon: image,
+      shape: shape,
+      title: defib[0],
+      zIndex: defib[3]
+    });
+  }
+}
+
+    </script>
+     <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7shuOovfRpwCjPKq3TMwticEhDALRxcI&signed_in=true&callback=initMap"></script>
+  </body>
+</html>

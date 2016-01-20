@@ -1,0 +1,52 @@
+[{
+	"name": "Pak N Save Kilbirnie",
+	"lat": -41.319012,
+	"lng": 174.796646,
+	"icons": "img/wfa.jpg"
+},{
+	"name": "Wellington Airport Level 1 - International Terminal",
+	"lat": -41.32759410000001,
+	"lng": 174.80759839999996,
+	"icons": "img/wfa.jpg"
+}, {
+	"name": "Southern Cross Garden Bar Restaurant",
+	"lat": -41.29649999999999,
+	"lng": 174.77446540000005,
+	"icons": "img/wfa.jpg"
+}, {
+	"name": "Briscoes Taranki St",
+	"lat": -41.2950636,
+	"lng": 174.77709630000004,
+	"icons": "img/wfa.jpg"
+}, {
+	"name": "St James Theatre",
+	"lat": -41.2931638,
+	"lng": 174.77967509999996,
+	"icons": "img/wfa.jpg"
+}, {
+	"name": "Crown Forestry Rental Trust - Level 7",
+	"lat": -41.28697599999999,
+	"lng": 174.77736900000002,
+	"icons": "img/wfa.jpg"
+}, {
+	"name": "Victoria University Campus Security - Level 1 - Cotton Building",
+	"lat": -41.2904017,
+	"lng": 174.7686615,
+	"icons": "img/wfa.jpg"
+}, {
+	"name": "Wellington Central Library",
+	"lat": -41.28819439999999,
+	"lng": 174.77680609999993,
+	"icons": "img/wfa.jpg"
+}, 
+	{
+	"name": "Michael Fowler Centre",
+	"lat": -41.2894328,
+	"lng": 174.77806299999997,
+	"icons": "img/wfa.jpg"
+}, {
+	"name": "TSB Bank Arena",
+	"lat": -41.2855147,
+	"lng": 174.77872209999998,
+	"icons": "img/wfa.jpg"
+}]
