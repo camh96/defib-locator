@@ -5,7 +5,7 @@ html, body
     padding: 0;
     font-family: sans-serif;
 }
-.nav
+nav
 {
 	padding: 10px;
 	height: 8%;
@@ -13,7 +13,17 @@ html, body
 	background-color: #003F6C;
 	color: white;
 }
+nav a
+{
+	color: white;
+	font-size: 50px;
+	text-decoration: none;
+}
 
+nav a:hover
+{
+	color:#29BD8B;
+}
 
 #map 
 {
@@ -22,8 +32,70 @@ html, body
     margin: 0 auto;
 }
 
-h1.header
+h2.header
 {
 	text-align: center;
+}
+
+.nav {
+  /* Clearfix */
+  overflow: auto;
+  zoom: 1;
+  clear: both;
+}
+
+.navigation
+{
+	margin: 0 10px;
+	padding: 0 10px;
+	float: right;
+	display: inline-block;
+	color: white;
+}
+
+h1.header-text
+{
+	color: #29BD8B;
+	text-decoration: none;
+}
+
+h1.emergency
+{
+	color: #e74c3c;
+	font-size: 40px;
 	text-transform: uppercase;
+	text-align: center;
+}
+.content
+{
+	margin: 0 auto;
+	text-align: center;
+}
+
+@media (max-width:767px) {
+    .content img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+@media (min-width:768px) {
+    .content img {
+        max-width: 240px;
+        max-height: 240px;
+    }
+}
+
+@media (min-width:992px) {
+    .content img {
+        max-width: 314px;
+        max-height: 314px;
+    }
+}
+
+@media (min-width:1200px) {
+    .content img {
+        max-width: 80%;
+        max-height: 80%;
+    }
 }

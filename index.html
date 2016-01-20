@@ -5,28 +5,24 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <meta charset="utf-8">
     <title>Defib Locator</title>
-    <style>
-
-    </style>
   </head>
   <body>
-  <div class="nav">
-  <h1>Wellington Free Almbulance Defib Locator</h1>
-  </div>
+
+<nav class="lg">
+  <a href="index.html">Home</a>
+  <a class="word2" href="contact.html">Contact</a>
+</nav>
   <div>
-  <h1 class="header">Holla</h1>
+  <h2 class="header">Welcome to WFA Defib-locator website. <br>There are 9 defibs listed here, around the Te Aro region</h2>
   </div>
     <div id="map"></div>
     <script>
 
-// The following example creates complex markers to indicate defibs near
-// Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
-// to the base of the flagpole.
 
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 12,
-    center: {lat: -41.29649999999999, lng: 174.77446540000005}
+    zoom: 15,
+    center: {lat: -41.2905022, lng: 174.7817372}
   });
 
   setMarkers(map);
